@@ -5,3 +5,5 @@ SELECT * FROM employee LIMIT 10;
 SELECT *
 FROM employee
 WHERE hiredate BETWEEN '2023-01-01' AND '2023-12-31';
+
+hồng là đồ ngốc
