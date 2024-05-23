@@ -1,0 +1,7 @@
+SELECT department, COUNT(*) FROM employee GROUP BY department HAVING COUNT(*) > 10;
+SELECT * FROM employee WHERE lastname LIKE 'Smith%';  -- Tìm các họ bắt đầu bằng 'Smith'
+SELECT * FROM employee LIMIT 10;
+
+SELECT *
+FROM employee
+WHERE hiredate BETWEEN '2023-01-01' AND '2023-12-31';
