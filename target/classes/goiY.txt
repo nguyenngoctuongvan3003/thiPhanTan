@@ -6,4 +6,24 @@ SELECT *
 FROM employee
 WHERE hiredate BETWEEN '2023-01-01' AND '2023-12-31';
 
-hồng là đồ ngốc
+ (CURRENT_DATE - hire_date) AS days_worked
+  salary > (SELECT AVG(salary) FROM employees);
+
+IS NULL
+
+SELECT *
+FROM departments d
+WHERE EXISTS (SELECT 1 FROM employees e WHERE e.department_id = d.department_id);
+
+SELECT *
+FROM employees
+WHERE salary > ANY (SELECT salary FROM employees WHERE department_id = 10);
+
+SELECT *
+FROM employees
+WHERE salary > ALL (SELECT salary FROM employees WHERE department_id = 10);
+
+-- Ghép nối tên và họ của nhân viên thành một chuỗi
+SELECT CONCAT(first_name, ' ', last_name) AS full_name
+FROM employees;
+
